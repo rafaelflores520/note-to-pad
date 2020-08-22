@@ -1,4 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
 .App {
+  position: relative;
+  width: 1440px;
+  height: 1024px;
+
+  background: #FFFFFF;
+}
+
+.Title-style {
+  position: absolute;
+  width: 484px;
+  height: 91px;
+  left: 33px;
+  top: 13px;
+
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 54px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+.Add-note, Add-note-text {
+  position: absolute;
+  width: 156px;
+  height: 64px;
+  left: 1263px;
+  top: 23px;
+
+  background: radial-gradient(50% 50% at 50% 50%, #FAFAFA 0%, rgba(255, 255, 255, 0) 100%);
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 20px;
+
+  
+}
+
+.Add-note-text {
+  position: absolute;
+  left: 25.00%;
+  right: 25.00%;
+  top: 25.00%;
+  bottom: 5.00%;
+
+  font-family: 'Comfortaa';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 33px;
+  line-height: 37px;
+/* identical to box height */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+
+  color: #000000;
+}
+
+
+
+/*.App {
   text-align: center;
 }
 
@@ -35,4 +102,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+}*/

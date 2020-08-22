@@ -1,0 +1,20 @@
+.Note-list {
+    position: absolute;
+    width: 451px;
+    height: 896px;
+    left: 33px;
+    top: 101px;
+}
+
+.Note-list-frame {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    
+    background: linear-gradient(180deg, #FAFAFA 0%, rgba(255, 255, 255, 0) 100%);
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 20px; 
+}

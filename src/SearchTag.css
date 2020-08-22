@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+.Search {
+    position: absolute;
+    height: 64px;
+    width: 690px;
+    left: 518px;
+    top: 23px;
+
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.SearchTag-input {
+    position: absolute;
+    width: 631.36px;
+    left: 5.6%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    border: none;
+
+    font-family: 'Comfortaa';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 34px;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+
