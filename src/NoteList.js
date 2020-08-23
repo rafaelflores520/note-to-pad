@@ -4,13 +4,14 @@ import { ListGroup, ListGroupItem } from 'reactstrap'
 
 export default class NoteList extends React.Component {
     render () {
-        const {notes, changeCurrentNote, deletenote} = this.props
+        const {notes, changeCurrentNote, deletenote, query} = this.props
         return (
             <div className="col-sm-4">
                 <center>
                     <div className="Note-list">
                         <ListGroup className='Note-list-frame'>
                         { notes.map((note) => (
+                            (findit(note.tags, query)) && ( //findit(note.tags, query)
                             <ListGroupItem 
                             className="Note-item" 
                             key={notes.id} 
@@ -19,13 +20,14 @@ export default class NoteList extends React.Component {
                                 <p className="Head-row">{note.heading}</p>
                                 <p className="Date-row">{note.curdate}</p>
                                 {note.tags.map((tag) => (
-                                    (tag != '') && (tag != ' ') && (
+                                    (tag !== '') && (tag !== ' ') && (
                                     <div className="Tag-box">
                                         <p className="Tag-row">{tag}</p>
                                     </div>
                                     )
                                 ))}
                             </ListGroupItem>
+                            )
                         ))}
                         </ListGroup>
                     </div> 
@@ -33,5 +35,17 @@ export default class NoteList extends React.Component {
             </div>
         );
     }
+}
+
+function findit(arr, qry){
+    console.log("Entra a la funcion")
+    console.log(arr)
+    for (let i = 0; i < arr.length; i++) {
+        const el = arr[i];
+        if (el.includes(qry)) {
+           return true 
+        }
+    }
+    return false
 }
 

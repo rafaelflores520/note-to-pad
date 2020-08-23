@@ -15,6 +15,15 @@ export default class Note extends React.Component{
         note.tags = this.textInput2.value.split(',') //"ta, t2, t3"
         this.props.savenote(note)
     }
+
+    /*clear(){
+        if (this.props.note === null){
+            this.textInput.value = ""
+            this.textAreaInput.value = ""
+            this.textInput2.value = ""
+        }
+    }*/
+
     render(){
         const { note } = this.props;
         return(

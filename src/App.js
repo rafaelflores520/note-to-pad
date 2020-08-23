@@ -10,7 +10,12 @@ const notesArray = [{id: 0, heading:'Note Uno', curdate: null, value:'This is a 
 export default class App extends React.Component {
   state = {
     currentNote: null,
-    notes: notesArray
+    notes: notesArray,
+    search: ''
+  }
+
+  changeCurrentQuery = (qry) => {
+    this.setState({ search: qry })
   }
 
   changeCurrentNote = (note) =>{
@@ -47,7 +52,7 @@ export default class App extends React.Component {
       <div className="container-fluid p-3">
         <div className="row align-items-center">
           <div className="col-sm p-1 m-1 Title-style">Note - To - Pad</div>
-          <Search/>
+          <Search changeCurrentQuery={this.changeCurrentQuery}/>
           <div className="col-sm p-1 m-1 center-block">
             <center>
               <Button className="Add-note" onClick={this.addNew}>
@@ -57,7 +62,7 @@ export default class App extends React.Component {
           </div>
         </div>
         <div className="row">
-          <NoteList notes={this.state.notes} changeCurrentNote={this.changeCurrentNote} deletenote={this.deletenote}/>
+          <NoteList notes={this.state.notes} changeCurrentNote={this.changeCurrentNote} deletenote={this.deletenote} query={this.state.search}/>
           <div className="col">
             {( this.state.currentNote !== null ) && ( <Note note={this.state.currentNote} savenote={this.saveNote}/> )}
           </div>
