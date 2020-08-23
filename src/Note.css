@@ -1,5 +1,6 @@
 .Note {
     /*position: absolute;*/
+    width: 100%;
     height: 896px;
     left: 10%;
     top: 10%;
@@ -10,19 +11,24 @@
     border-radius: 20px;
 }
 
+.Note-title, .Note-body, .Note-tags {
+    margin: 10px;
+}
+
 .Note-title {
     position: absolute;
-    width: 95%;
+    width: 90%;
     left: 2.33%;
     right: 0%;
     top: 1.9%;
     bottom: 86.83%;
+    
 
     font-family: 'Comfortaa';
     font-style: normal;
     font-weight: normal;
     font-size: 2.5vw;
-    line-height: 4.953560371517028vh;
+    line-height: 4.54px;
     align-items: center;
     background: transparent;
 
@@ -33,7 +39,7 @@
 .Note-body {
     position: absolute;
     /*width: 871px;*/
-    width: 95%;
+    width: 90%;
     left: 2.33%;
     right: 0%;
     top: 16.85%;
@@ -43,7 +49,7 @@
     font-style: normal;
     font-weight: normal;
     font-size: 1.875vw;
-    line-height: 4.12796697626419vh;
+    line-height: 40px;
     background: transparent;
     
     color: #000000;
@@ -61,13 +67,27 @@
     font-style: normal;
     font-weight: normal;
     font-size: 1.25vw;
-    line-height: 2.7863777089783284vh;
+    line-height: 27px;
     
     align-items: center;
     background: transparent;
     
     color: #000000;
     border: none;
+}
+
+@media (max-width: 600px){
+    .Note-title{
+        font-size: 10.5vw;
+    }
+
+    .Note-body{
+        font-size: 7.75vw;
+    }
+
+    .Note-tags {
+        font-size: 5.25vw;
+    }
 }
 
 .dash {
@@ -84,4 +104,10 @@
     position: relative;
     left: 0%;
     top: 90%;
+}
+
+.full{
+    width: 100vw;
+    display: flex; 
+    flex:1;
 }

@@ -5,7 +5,7 @@ import Search from './SearchTag';
 import Note from './Note';
 import { Button } from 'reactstrap';
 
-const notesArray = [{id: 1, heading:' ', date: null , value:' '}]
+const notesArray = [{id: 0, heading:'Note Uno', curdate: null, value:'This is a note', tags:['t1', 't2', 't3']}]
 
 export default class App extends React.Component {
   state = {
@@ -28,9 +28,10 @@ export default class App extends React.Component {
   }
 
   addNew = () =>{
-    const note = {id: this.state.notes.length + 1, heading: '', curdate: this.DateFormat(), value: ' '}
+    const note = {id: this.state.notes.length + 1, heading: 'New Title', curdate: this.DateFormat(), value: ' ', tags:[]}
     this.setState((state) => ({ notes: state.notes.concat([note]) }))
     this.setState({ currentNote: note })
+    //console.log("El id de esta iteracion es: "+note.id)
   }
 
   DateFormat() {
@@ -57,7 +58,7 @@ export default class App extends React.Component {
         </div>
         <div className="row">
           <NoteList notes={this.state.notes} changeCurrentNote={this.changeCurrentNote} deletenote={this.deletenote}/>
-          <div>
+          <div className="col">
             {( this.state.currentNote !== null ) && ( <Note note={this.state.currentNote} savenote={this.saveNote}/> )}
           </div>
         </div>

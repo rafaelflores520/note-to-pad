@@ -1,6 +1,6 @@
 import React from 'react';
 import './NoteList.css';
-import { ListGroup, ListGroupItem, Button } from 'reactstrap'
+import { ListGroup, ListGroupItem } from 'reactstrap'
 
 export default class NoteList extends React.Component {
     render () {
@@ -13,11 +13,18 @@ export default class NoteList extends React.Component {
                         { notes.map((note) => (
                             <ListGroupItem 
                             className="Note-item" 
-                            key= {notes.id} 
+                            key={notes.id} 
                             onClick={() => changeCurrentNote(note)}>
+                            <button className="Delete-note" onClick={ () => deletenote(note)}>X</button>
                                 <p className="Head-row">{note.heading}</p>
                                 <p className="Date-row">{note.curdate}</p>
-                                <Button className="Delete-note" onClick={ () => deletenote(note)}>X</Button>
+                                {note.tags.map((tag) => (
+                                    (tag != '') && (tag != ' ') && (
+                                    <div className="Tag-box">
+                                        <p className="Tag-row">{tag}</p>
+                                    </div>
+                                    )
+                                ))}
                             </ListGroupItem>
                         ))}
                         </ListGroup>

@@ -3,7 +3,7 @@
 .Search {
     /*position: absolute;*/
     height: 64px;
-    left: 0%;
+    left: .5%;
     top: 0%;
     width: 690px;
     /*height: 64px;
@@ -19,7 +19,7 @@
 
 .Search-input {
     position: absolute;
-    width: 631.36px;
+    width: 90%;
     left: 5.6%;
     right: 0%;
     top: 0%;
