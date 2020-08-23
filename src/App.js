@@ -2,19 +2,24 @@ import React from 'react';
 import './App.css';
 import NoteList from './NoteList';
 import Search from './SearchTag';
+import Note from './Note';
+import { Button } from 'reactstrap';
 
 
-function App() {
-  return (
-    <div className="App">
-      <h1 className="Title-style">Note - To - Pad</h1>
-      <Search/>
-      <button className="Add-note">
-          <p className="Add-note-text">New</p>
-      </button>
-      <NoteList/>
-    </div>
-  );
+export default class App extends React.Component {
+  render(){
+    return (
+      <div className="container">
+        <NoteList/>
+        <nav className="navbar navbar-expand-sm justify-content-start">
+          <h1 className="Title-style col-">Note - To - Pad</h1>
+          <Search/>
+          <Button className="Add-note col-">
+            <p className="Add-note-text">New</p>
+          </Button>
+        </nav>
+        <Note/>
+      </div>
+    );
+  }
 }
-
-export default App;

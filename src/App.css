@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
 
-.App {
-  position: relative;
-  width: 1440px;
-  height: 1024px;
-
-  background: #FFFFFF;
-}
-
 .Title-style {
   position: absolute;
   width: 484px;
@@ -34,7 +26,7 @@
   left: 1263px;
   top: 23px;
 
-  background: radial-gradient(50% 50% at 50% 50%, #FAFAFA 0%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(180deg, #FFFFFF 0%, #f4f4f4 100%);
   border: 1px solid #000000;
   box-sizing: border-box;
   border-radius: 20px;
