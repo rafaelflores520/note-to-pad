@@ -5,9 +5,29 @@ import Search from './SearchTag';
 import Note from './Note';
 import { Button } from 'reactstrap';
 
-const notesArray = [{id: 0, heading:'Note Uno', curdate: null, value:'This is a note', tags:['t1', 't2', 't3']}]
+let isThere = !!localStorage.getItem('datos')
+console.log("Entro?")
+const notesArray = isThere ? JSON.parse(localStorage.getItem('datos')) : []
+console.log(notesArray)
+
+/*constructor(props){
+    super(props)
+    if (!!guardado) {
+      state = guardado
+    }else{
+      state = {
+        currentNote: null,
+        notes: notesArray,
+        search: ''
+      }
+  } */
 
 export default class App extends React.Component {
+  /*componentDidMount() {
+    const currentNote = localStorage.getItem('datosC') === 'true';
+    const user = rememberMe ? localStorage.getItem('user') : '';
+    this.setState({ user, rememberMe });
+  }*/
   state = {
     currentNote: null,
     notes: notesArray,
@@ -30,6 +50,7 @@ export default class App extends React.Component {
   saveNote = (note) =>{
     this.setState((state) => { state.notes.concat([note]) })
     this.setState({ currentNote: note })
+    localStorage.setItem('datos', JSON.stringify(this.state.notes));
   }
 
   addNew = () =>{
@@ -44,7 +65,7 @@ export default class App extends React.Component {
     var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
     var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
     return date+' '+time;
-}
+  }
 
   render(){
     this.state.notes.sort((a, b) => {return b.id-a.id})
