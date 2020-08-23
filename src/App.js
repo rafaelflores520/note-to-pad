@@ -9,17 +9,29 @@ import { Button } from 'reactstrap';
 export default class App extends React.Component {
   render(){
     return (
-      <div className="container">
-        <NoteList/>
-        <nav className="navbar navbar-expand-sm justify-content-start">
-          <h1 className="Title-style col-">Note - To - Pad</h1>
+      <div className="container-fluid p-3">
+        <div className="row align-items-center">
+          <div className="col-sm p-1 m-1 Title-style">Note - To - Pad</div>
           <Search/>
-          <Button className="Add-note col-">
-            <p className="Add-note-text">New</p>
-          </Button>
-        </nav>
-        <Note/>
+          <div className="col-sm p-1 m-1 center-block">
+            <center>
+              <Button className="Add-note">
+                <p className="Add-note-text">New</p>
+              </Button>
+            </center>
+          </div>
+        </div>
+        <div className="row">
+          <NoteList/>
+          <Note/>
+        </div>
       </div>
     );
   }
 }
+
+/*
+<div className="col-sm">
+ <Note/>
+</div>
+*/

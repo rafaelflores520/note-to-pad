@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
 
 .Search {
-    position: absolute;
+    /*position: absolute;*/
     height: 64px;
+    left: 0%;
+    top: 0%;
     width: 690px;
+    /*height: 64px;
     left: 518px;
     top: 23px;
+    width: 690px;*/
 
     background: #FFFFFF;
     border: 1px solid #000000;

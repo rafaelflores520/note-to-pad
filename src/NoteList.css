@@ -1,9 +1,11 @@
 .Note-list {
-    position: absolute;
-    width: 451px;
+    position: relative;
+    /*width: 451px;*/
     height: 896px;
-    left: 33px;
-    top: 101px;
+    left: 0%;
+    top: 10%;
+    /*margin-left: 2em;
+    margin-right: 2em;*/
 }
 
 .Note-list-frame {
