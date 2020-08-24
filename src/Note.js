@@ -16,18 +16,10 @@ export default class Note extends React.Component{
         this.props.savenote(note)
     }
 
-    /*clear(){
-        if (this.props.note === null){
-            this.textInput.value = ""
-            this.textAreaInput.value = ""
-            this.textInput2.value = ""
-        }
-    }*/
-
     render(){
         const { note } = this.props;
         return(
-            
+
                 <div className="Note">
                     <input className="Note-title " placeholder="Title Here..." ref={(input) => { this.textInput = input }} onChange={(event)=>this.save(note) }/>
                     <div className="dash Up"/>

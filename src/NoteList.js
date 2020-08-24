@@ -40,6 +40,9 @@ export default class NoteList extends React.Component {
 function findit(arr, qry){
     console.log("Entra a la funcion")
     console.log(arr)
+    if (!arr.length) {
+        return true
+    }
     for (let i = 0; i < arr.length; i++) {
         const el = arr[i];
         if (el.includes(qry)) {

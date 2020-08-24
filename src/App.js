@@ -6,28 +6,9 @@ import Note from './Note';
 import { Button } from 'reactstrap';
 
 let isThere = !!localStorage.getItem('datos')
-console.log("Entro?")
 const notesArray = isThere ? JSON.parse(localStorage.getItem('datos')) : []
-console.log(notesArray)
-
-/*constructor(props){
-    super(props)
-    if (!!guardado) {
-      state = guardado
-    }else{
-      state = {
-        currentNote: null,
-        notes: notesArray,
-        search: ''
-      }
-  } */
 
 export default class App extends React.Component {
-  /*componentDidMount() {
-    const currentNote = localStorage.getItem('datosC') === 'true';
-    const user = rememberMe ? localStorage.getItem('user') : '';
-    this.setState({ user, rememberMe });
-  }*/
   state = {
     currentNote: null,
     notes: notesArray,
@@ -44,7 +25,7 @@ export default class App extends React.Component {
 
   deletenote = (note) =>{
     this.setState((state) => ({ notes: state.notes.filter(noteIterator => (noteIterator.id !== note.id)) }))
-    this.setState({ currentNote: null })
+    this.changeCurrentNote(null);
   }
 
   saveNote = (note) =>{
@@ -85,6 +66,8 @@ export default class App extends React.Component {
         <div className="row">
           <NoteList notes={this.state.notes} changeCurrentNote={this.changeCurrentNote} deletenote={this.deletenote} query={this.state.search}/>
           <div className="col">
+            {( this.state.currentNote === null ) && 
+            ( <div className="Note-mask"/>)}
             {( this.state.currentNote !== null ) && ( <Note note={this.state.currentNote} savenote={this.saveNote}/> )}
           </div>
         </div>

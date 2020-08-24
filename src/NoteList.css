@@ -25,6 +25,7 @@
 .Note-item {
     margin: 2%;
     height: 20%;
+    min-height: 180px;
 
     background: linear-gradient(180deg, #FAFAFA 0%, rgba(255, 255, 255, 0) 100%);
     border: 1px solid #000000;

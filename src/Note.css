@@ -90,6 +90,10 @@
     }
 }
 
+.Note-body, .Note-tags, .Note-title:focus{
+    outline: #C4C4C4;
+}
+
 .dash {
     border: 1px solid #c0c0c0;
 }

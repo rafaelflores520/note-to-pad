@@ -51,6 +51,19 @@
   margin: 10px;
 }
 
+.Note-mask {
+  /*position: absolute;*/
+  width: 100%;
+  height: 896px;
+  left: 10%;
+  top: 10%;
+
+  background: linear-gradient(180deg, #FAFAFA 0%, rgba(250, 250, 250, 0) 100%);
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
 
 
 /*.App {
