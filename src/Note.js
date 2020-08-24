@@ -25,7 +25,7 @@ export default class Note extends React.Component{
                     <div className="dash Up"/>
                     <textarea className="Note-body " placeholder="Text Here..." ref={(input) => { this.textAreaInput = input}} onChange={()=>this.save(note) }/>
                     <div className="dash Down"/>
-                    <input className="Note-tags " placeholder="Tags Here..." ref={(input) => { this.textInput2 = input}} onChange={(event)=>this.save(note) }/>
+                    <input className="Note-tags " placeholder="Tags Here by Commas: Tag1, Tag2, Tag3," ref={(input) => { this.textInput2 = input}} onChange={(event)=>this.save(note) }/>
                 </div>
             
         );

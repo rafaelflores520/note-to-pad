@@ -11,7 +11,7 @@ export default class NoteList extends React.Component {
                     <div className="Note-list">
                         <ListGroup className='Note-list-frame'>
                         { notes.map((note) => (
-                            (findit(note.tags, query)) && ( //findit(note.tags, query)
+                            (findit(note.tags, query)) && ( //findit(note.tags, query) // () && ()
                             <ListGroupItem 
                             className="Note-item" 
                             key={notes.id} 
@@ -38,8 +38,6 @@ export default class NoteList extends React.Component {
 }
 
 function findit(arr, qry){
-    console.log("Entra a la funcion")
-    console.log(arr)
     if (!arr.length) {
         return true
     }

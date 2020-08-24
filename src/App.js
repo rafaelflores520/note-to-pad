@@ -11,7 +11,7 @@ const notesArray = isThere ? JSON.parse(localStorage.getItem('datos')) : []
 export default class App extends React.Component {
   state = {
     currentNote: null,
-    notes: notesArray,
+    notes: notesArray, //[{id: 1, date: "hoy", ... , tags:["t1", "t2", "t3"]}]
     search: ''
   }
 
@@ -67,7 +67,7 @@ export default class App extends React.Component {
           <NoteList notes={this.state.notes} changeCurrentNote={this.changeCurrentNote} deletenote={this.deletenote} query={this.state.search}/>
           <div className="col">
             {( this.state.currentNote === null ) && 
-            ( <div className="Note-mask"/>)}
+            ( <div className="Note-mask Note-mask-item d-flex justify-content-center align-items-center">Presione New para crear una nota<br/>o<br/>Seleccione una nota existente</div>)}
             {( this.state.currentNote !== null ) && ( <Note note={this.state.currentNote} savenote={this.saveNote}/> )}
           </div>
         </div>
