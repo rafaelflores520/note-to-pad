@@ -16,5 +16,5 @@ jobs:
       - name: Cypress Run
         uses: cypress-io/github-action@v4.2.0
         with: 
-          spec: cypress/spec.cy.js
+          spec: .cypress/spec.cy.js
       - run: echo "🍏 This job's status is ${{ job.status }}."
