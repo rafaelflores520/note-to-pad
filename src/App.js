@@ -53,7 +53,7 @@ export default class App extends React.Component {
     return (
       <div className="container-fluid p-3">
         <div className="row align-items-center">
-          <div className="col-sm p-1 m-1 Title-style">Note - To - Pad</div>
+          <div className="col-sm p-1 m-1 Title-style">Note - To - Pads</div>
           <Search changeCurrentQuery={this.changeCurrentQuery}/>
           <div className="col-sm p-1 m-1 center-block">
             <center>
