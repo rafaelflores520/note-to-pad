@@ -19,5 +19,4 @@ jobs:
         uses: cypress-io/github-action@v4.2.0
         with: 
           start: npm start
-          spec: ./cypress/spec.cy.js
       - run: echo "🍏 This job's status is ${{ job.status }}."
