@@ -13,4 +13,3 @@ describe('Create a Note', () => {
     cy.get("li").contains("New Note")
   })
 })
-
